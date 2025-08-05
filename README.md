@@ -15,13 +15,13 @@ XML Format Output
 ### Not compressed (For development)
 
 ```
-GET https://chrome-dl.com/api/chrome.xml
+GET https://chrome.ntr.sb/api/chrome.xml
 ```
 
 ### Compressed (For production)
 
 ```
-GET https://chrome-dl.com/api/chrome.min.xml
+GET https://chrome.ntr.sb/api/chrome.min.xml
 ```
 
 ## Advanced - Google Updater (Omaha) API
