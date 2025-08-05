@@ -1,0 +1,25 @@
+name: Latest Build to GitHub Pages
+on:
+  schedule:
+    - cron: '0 20 * * 2' # 每周二晚上8点触发
+  push:
+    branches:
+      - master # 你可以根据需要更改分支名称
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Run custom script
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libxml2-utils
+        chmod +x run.sh
+        ./run.sh
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
