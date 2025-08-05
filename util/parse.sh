@@ -21,15 +21,15 @@ do
     sed -i 's| ||g' ./tmp/parse/${i}.info
 
     # version
-    sed -n '16p' ./tmp/parse/${i}.info > ./tmp/parse/${i}-result.info
+    sed -n '14p' ./tmp/parse/${i}.info > ./tmp/parse/${i}-result.info
     # download base
-    sed -n '10p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
+    sed -n '8p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     # download alternative base
-    sed -n '12p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
+    sed -n '10p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     # download file
-    sed -n '25p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
+    sed -n '23p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     # sha256
-    sed -n '24p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
+    sed -n '22p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     # size
-    sed -n '26p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
+    sed -n '24p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
 done
